@@ -1,0 +1,8 @@
+{
+    "conventionalCommits.scopes": [
+        "callable-wf",
+        "local-wf",
+        "docs",
+        "tests",
+    ]
+}
