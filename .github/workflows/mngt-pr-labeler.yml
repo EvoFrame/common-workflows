@@ -1,0 +1,25 @@
+# This workflow is supposed to be used to manage the PR labels based on the rules defined in the .github/labeler.yml file
+
+name: PR Labeler
+
+on:
+  workflow_call:
+    inputs:
+      labeler-config:
+        type: string
+        required: false
+        description: "The path to the labeler configuration file"
+        default: ".github/labeler.yml"
+
+jobs:
+  pr-labeler:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Labeler
+        uses: actions/labeler@v5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: ${{ inputs.labeler-config }}

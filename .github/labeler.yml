@@ -1,0 +1,34 @@
+# ---------------------------------------------------------------------------------------------------- #
+# This file is used to define the rules for the labeler action
+# The labeler action will add labels to PRs based on the rules defined in this file
+# The rules are defined as a list of conditions that need to be met in order to apply a label
+# ---------------------------------------------------------------------------------------------------- #
+
+# Add 'documentation' label to any change to files within the docs sub-folder
+documentation:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "docs/**/*"
+
+# Add 'feature' label to any PR where the head branch name starts with `feature` or has a `feature` section in the name
+feature:
+  - head-branch: ["^feature", "feature"]
+
+# Add 'fix' label to any PR where the head branch name starts with `fix` or has a `fix` section in the name
+fix:
+  - head-branch: ["^fix", "fix"]
+
+# Add 'release' label to any PR that is opened against the `main` branch
+release:
+  - base-branch: "main"
+
+# Add 'hotfix' label to any PR that is opened against the `main` branch and where the head branch name starts with `hotfix` or has a `hotfix` section in the name
+hotfix:
+  - base-branch: "main"
+  - head-branch: ["^hotfix", "hotfix"]
+
+# Add 'changelog' label to any PR that is opened against the `main` branch and where the `CHANGELOG.md` file is modified
+changelog:
+  - base-branch: "main"
+  - changed-files:
+      - any-glob-to-any-file: "CHANGELOG.md"
