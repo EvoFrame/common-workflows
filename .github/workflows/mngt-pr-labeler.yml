@@ -1,8 +1,12 @@
 # This workflow is supposed to be used to manage the PR labels based on the rules defined in the .github/labeler.yml file
-
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/actions/labeler
 name: PR Labeler
 
 on:
+  # Let the workflow be callable from other workflows
   workflow_call:
     inputs:
       labeler-config:
@@ -10,6 +14,12 @@ on:
         required: false
         description: "The path to the labeler configuration file"
         default: ".github/labeler.yml"
+
+  # Triggers the workflow on pull request events
+  pull_request_target:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   pr-labeler:
