@@ -3,18 +3,11 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: Mark stale issues and pull requests
+name: PR and Issue Staler
 
 on:
-  # Triggers the workflow on a schedule
-  schedule:
-    - cron: "0 3 * * *"
-
   # Let the workflow be callable from other workflows
   workflow_call:
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 jobs:
   stale:
