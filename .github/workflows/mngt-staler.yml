@@ -3,7 +3,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: PR and Issue Staler
+name: Management Staler
 
 on:
   # Let the workflow be callable from other workflows

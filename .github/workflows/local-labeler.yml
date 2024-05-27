@@ -1,6 +1,6 @@
 # Local repository workflow
 
-name: PR Labeler
+name: Local Labeler
 
 on:
   # Triggers the workflow on pull request events
@@ -11,6 +11,6 @@ on:
 
 jobs:
   labeler:
-    uses: EvoFrame/common-workflows/.github/workflows/reusables/mngt-pr-labeler.yml@main
+    uses: EvoFrame/common-workflows/.github/workflows/mngt-labeler.yml@main
     with:
       labeler-config: .github/labeler.yml

@@ -1,6 +1,6 @@
 # Local repository workflow
 
-name: PR Labeler
+name: Local Staler
 
 on:
   # Triggers the workflow on a schedule
@@ -12,4 +12,4 @@ on:
 
 jobs:
   labeler:
-    uses: EvoFrame/common-workflows/.github/workflows/reusables/mngt-pr-issues-staler.yml@main
+    uses: EvoFrame/common-workflows/.github/workflows/mngt-staler.yml@main

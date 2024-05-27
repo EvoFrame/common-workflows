@@ -3,7 +3,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/labeler
-name: PR Labeler
+name: Management Labeler (PR)
 
 on:
   # Let the workflow be callable from other workflows
