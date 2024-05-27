@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  labeler:
+  stale:
     permissions:
       issues: write
       pull-requests: write
