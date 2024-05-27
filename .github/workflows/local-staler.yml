@@ -12,4 +12,7 @@ on:
 
 jobs:
   labeler:
+    permissions:
+      issues: write
+      pull-requests: write
     uses: EvoFrame/common-workflows/.github/workflows/mngt-staler.yml@main
